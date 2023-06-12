@@ -1,0 +1,6 @@
+openapi: 3.0.3
+info:
+  title: VS Products API Definition
+  description: Using this OpenAPI specification, any consumer can understand the API's that are exposed VS
+  version: 0.0.1
+paths: {}
