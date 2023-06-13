@@ -1,0 +1,37 @@
+openapi: 3.0.3
+
+info:
+  title: VS Products API Definition
+  description: |
+    Using this OpenAPI specification, any consumer can understand the API's that are exposed VS
+  termsOfService: https://vs.com/terms/
+  contact:
+    name: API Support
+    url: https://vs.com/support
+    email: support@vs.com
+  license:
+    name: VS License
+    url: https://www.vs.com/licenses/LICENSE-2.0.html
+  version: 0.0.1
+  
+servers:
+  - url: https://dev.vs.com
+    description: Development Server
+  - url: https://qa.vs.com
+    description: Testing Server
+  - url: https://prod.vs.com
+    description: Production Server
+  - url: https://{username}.server.com:{port}/{version}
+    variables:
+      username:
+        default: demo
+        description: This value is assgined by the service provider.
+      port:
+        enum:
+          - "8443"
+          - "443"
+        default: "8443"
+      version:
+        default: v1
+        
+paths: {}
